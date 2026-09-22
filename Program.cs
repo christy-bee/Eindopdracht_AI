@@ -1,7 +1,11 @@
+using Recepten_bootcamp_AI.Model_Services;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<ReceptService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 1,
+    "Naam": "Kip met broccoli",
+    "BereidingstijdMinuten": 20,
+    "Personen": 2,
+    "Ingredienten": [
+      {
+        "Naam": "Kipfilet",
+        "Hoeveelheid": "200 gram"
+      }
+    ],
+    "Bereidingswijze": "Bak de kip en kook de broccoli.",
+    "Opmerking": "Geschikt voor whatever."
+  },
+  {
+    "Id": 2,
+    "Naam": "Tomaten-Paprika soep",
+    "BereidingstijdMinuten": 30,
+    "Personen": 2,
+    "Ingredienten": [
+      {
+        "Naam": "Paprika",
+        "Hoeveelheid": "2,5 stuks"
+      }
+    ],
+    "Bereidingswijze": "Rooster de tomaten en paprika in de oven, mik daarna alles in de pan en pureer de shit",
+    "Opmerking": "Ook geschikt voor lunch."
+  }
+]

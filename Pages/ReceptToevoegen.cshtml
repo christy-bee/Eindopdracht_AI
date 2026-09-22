@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <form class="recept-formulier">
+    <form method="post" class="recept-formulier">
 
         <!-- Foto -->
         <div class="recept-foto">
@@ -54,31 +54,31 @@
             </summary>
 
             <div class="formulier-veld">
-                <label for="naam">Naam van het recept</label>
+                <label asp-for="Recept.Naam">Naam van het recept</label>
 
-                <input type="text"
-                       id="naam"
-                       name="naam"
+                <input asp-for="Recept.Naam"
+                       type="text"
                        placeholder="Bijvoorbeeld: Pasta pesto">
             </div>
 
             <div class="formulier-rij">
 
                 <div class="formulier-veld">
-                    <label for="bereidingstijd">Bereidingstijd</label>
+                    <label asp-for="Recept.BereidingstijdMinuten">Bereidingstijd in minuten</label>
 
-                    <input type="number"
-                           id="bereidingstijd"
-                           name="bereidingstijd"
+                    <input asp-for="Recept.BereidingstijdMinuten"
+                           type="number"
+                           min="1"
                            placeholder="30">
+
+                    <small>Vul de bereidingstijd in minuten in.</small>
                 </div>
 
                 <div class="formulier-veld">
-                    <label for="personen">Aantal personen</label>
+                    <label asp-for="Recept.Personen">Aantal personen</label>
 
-                    <input type="number"
-                           id="personen"
-                           name="personen"
+                    <input asp-for="Recept.Personen"
+                           type="number"
                            placeholder="2">
                 </div>
 
@@ -103,10 +103,12 @@
 
             <div class="ingredient-rij">
 
-                <input type="text"
+                <input asp-for="Recept.Ingredienten[0].Naam"
+                       type="text"
                        placeholder="Bijvoorbeeld: kipfilet">
 
-                <input type="text"
+                <input asp-for="Recept.Ingredienten[0].Hoeveelheid"
+                       type="text"
                        placeholder="Hoeveelheid">
 
                 <button type="button" class="btn-verwijder">
@@ -138,12 +140,11 @@
 
             <div class="formulier-veld">
 
-                <label for="bereidingswijze">
+                <label asp-for="Recept.Bereidingswijze">
                     Bereidingswijze
                 </label>
 
-                <textarea id="bereidingswijze"
-                          name="bereidingswijze"
+                <textarea asp-for="Recept.Bereidingswijze"
                           rows="6"
                           placeholder="Beschrijf hier stap voor stap hoe je het gerecht maakt."></textarea>
 
@@ -168,12 +169,11 @@
 
             <div class="formulier-veld">
 
-                <label for="opmerking">
+                <label asp-for="Recept.Opmerking">
                     Opmerking
                 </label>
 
-                <textarea id="opmerking"
-                          name="opmerking"
+                <textarea asp-for="Recept.Opmerking"
                           rows="4"
                           placeholder="Bijvoorbeeld: geschikt voor mealprep"></textarea>
 

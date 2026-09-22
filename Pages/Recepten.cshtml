@@ -20,23 +20,18 @@
 
     <div class="recepten-lijst">
 
-        <div class="recept-kaart">
-            <h2>Pasta pesto</h2>
-            <p>25 min</p>
-            <button>Verwijderen</button>
-        </div>
+        @foreach (var recept in Model.Recepten)
+        {
+            <div class="recept-kaart">
+                <h2>@recept.Naam</h2>
 
-        <div class="recept-kaart">
-            <h2>Groente bowl</h2>
-            <p>20 min</p>
-            <button>Verwijderen</button>
-        </div>
+                <p>@recept.BereidingstijdMinuten min</p>
 
-        <div class="recept-kaart">
-            <h2>Soep met groenten</h2>
-            <p>30 min</p>
-            <button>Verwijderen</button>
-        </div>
+                <p>Voor @recept.Personen personen</p>
+
+                <button type="button">Verwijderen</button>
+            </div>
+        }
 
     </div>
 
