@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <form class="recept-formulier">
+    <form method="post" class="recept-formulier">
 
         <!-- Foto -->
         <div class="recept-foto">
@@ -59,6 +59,7 @@
                 <input type="text"
                        id="naam"
                        name="naam"
+                       asp-for="Recept.Naam"
                        placeholder="Bijvoorbeeld: Pasta pesto">
             </div>
 
@@ -70,6 +71,7 @@
                     <input type="number"
                            id="bereidingstijd"
                            name="bereidingstijd"
+                           asp-for="Recept.Bereidingstijd"
                            placeholder="30">
                 </div>
 
@@ -79,6 +81,7 @@
                     <input type="number"
                            id="personen"
                            name="personen"
+                           asp-for="Recept.Personen"
                            placeholder="2">
                 </div>
 
@@ -104,9 +107,11 @@
             <div class="ingredient-rij">
 
                 <input type="text"
+                       asp-for="Recept.Ingredienten[0].Naam"
                        placeholder="Bijvoorbeeld: kipfilet">
 
                 <input type="text"
+                       asp-for="Recept.Ingredienten[0].Hoeveelheid"
                        placeholder="Hoeveelheid">
 
                 <button type="button" class="btn-verwijder">
@@ -143,7 +148,7 @@
                 </label>
 
                 <textarea id="bereidingswijze"
-                          name="bereidingswijze"
+                          asp-for="Recept.Bereidingswijze"
                           rows="6"
                           placeholder="Beschrijf hier stap voor stap hoe je het gerecht maakt."></textarea>
 
@@ -173,7 +178,7 @@
                 </label>
 
                 <textarea id="opmerking"
-                          name="opmerking"
+                          asp-for="Recept.Opmerking"
                           rows="4"
                           placeholder="Bijvoorbeeld: geschikt voor mealprep"></textarea>
 
