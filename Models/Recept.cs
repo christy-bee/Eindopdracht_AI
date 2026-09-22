@@ -1,4 +1,6 @@
-﻿namespace Recepten_bootcamp_AI.Models
+﻿using Recepten_bootcamp_AI.Models;
+
+namespace Recepten_bootcamp_AI.Models
 {
     public class Recept
     {
@@ -6,7 +8,7 @@
 
         public string Naam { get; set; } = "";
 
-        public int Bereidingstijd { get; set; }
+        public int BereidingstijdMinuten { get; set; }
 
         public int Personen { get; set; }
 
@@ -17,4 +19,3 @@
         public string Opmerking { get; set; } = "";
     }
 }
-

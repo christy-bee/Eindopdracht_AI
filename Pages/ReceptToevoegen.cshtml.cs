@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Recepten_bootcamp_AI.Model_Services;
 using Recepten_bootcamp_AI.Models;
-using Recepten_bootcamp_AI.Services;
 
 namespace Recepten_bootcamp_AI.Pages
 {

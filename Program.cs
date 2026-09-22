@@ -1,4 +1,4 @@
-using Recepten_bootcamp_AI.Services;
+using Recepten_bootcamp_AI.Model_Services;
 
 
 var builder = WebApplication.CreateBuilder(args);

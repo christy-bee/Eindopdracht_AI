@@ -1,7 +1,7 @@
-﻿using System.Text.Json;
-using Recepten_bootcamp_AI.Models;
+﻿using Recepten_bootcamp_AI.Models;
+using System.Text.Json;
 
-namespace Recepten_bootcamp_AI.Services
+namespace Recepten_bootcamp_AI.Model_Services
 {
     public class ReceptService
     {
