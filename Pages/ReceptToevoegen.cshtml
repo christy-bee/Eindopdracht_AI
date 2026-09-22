@@ -1,0 +1,144 @@
+﻿@page
+@model Recepten_bootcamp_AI.Pages.ReceptToevoegenModel
+@{
+    ViewData["Title"] = "Recept toevoegen";
+}
+
+<div class="recept-toevoegen-pagina">
+
+    <div class="recept-toevoegen-header">
+        <div>
+            <p class="kleine-titel">Mijn recepten</p>
+            <h1>Nieuw recept toevoegen</h1>
+            <p>Voeg een nieuw recept toe aan je recepten.</p>
+        </div>
+    </div>
+
+    <form class="recept-formulier">
+
+        <!-- Foto -->
+        <div class="recept-foto">
+            <div class="foto-icoon">+</div>
+            <h2>Foto toevoegen</h2>
+            <p>Voeg een foto van je gerecht toe.</p>
+
+            <button type="button" class="btn-foto">
+                Foto kiezen
+            </button>
+        </div>
+
+
+        <!-- Basisinformatie -->
+        <details class="formulier-sectie" open>
+            <summary>
+                <h2>Basisinformatie</h2>
+                <span class="pijl">⌄</span>
+            </summary>
+
+            <div class="formulier-veld">
+                <label for="naam">Naam van het recept</label>
+                <input type="text"
+                       id="naam"
+                       name="naam"
+                       placeholder="Bijvoorbeeld: Pasta pesto">
+            </div>
+
+            <div class="formulier-rij">
+
+                <div class="formulier-veld">
+                    <label for="bereidingstijd">Bereidingstijd</label>
+                    <input type="number"
+                           id="bereidingstijd"
+                           name="bereidingstijd"
+                           placeholder="30">
+                </div>
+
+                <div class="formulier-veld">
+                    <label for="personen">Aantal personen</label>
+                    <input type="number"
+                           id="personen"
+                           name="personen"
+                           placeholder="2">
+                </div>
+
+            </div>
+        </details>
+
+
+        <!-- Ingrediënten -->
+        <details class="formulier-sectie">
+            <summary>
+                <h2>Ingrediënten</h2>
+                <span class="pijl">⌄</span>
+            </summary>
+
+            <div class="ingredient-rij">
+                <input type="text"
+                       placeholder="Bijvoorbeeld: kipfilet">
+
+                <input type="text"
+                       placeholder="Hoeveelheid">
+
+                <button type="button" class="btn-verwijder">
+                    Verwijderen
+                </button>
+            </div>
+
+            <button type="button" class="btn-ingredient">
+                + Ingrediënt toevoegen
+            </button>
+        </details>
+
+
+        <!-- Bereidingswijze -->
+        <details class="formulier-sectie">
+            <summary>
+                <h2>Bereidingswijze</h2>
+                <span class="pijl">⌄</span>
+            </summary>
+
+            <div class="formulier-veld">
+                <label for="bereidingswijze">Bereidingswijze</label>
+
+                <textarea id="bereidingswijze"
+                          name="bereidingswijze"
+                          rows="6"
+                          placeholder="Beschrijf hier stap voor stap hoe je het gerecht maakt."></textarea>
+            </div>
+        </details>
+
+
+        <!-- Extra informatie -->
+        <details class="formulier-sectie">
+            <summary>
+                <h2>Extra informatie</h2>
+                <span class="pijl">⌄</span>
+            </summary>
+
+            <div class="formulier-veld">
+                <label for="opmerking">Opmerking</label>
+
+                <textarea id="opmerking"
+                          name="opmerking"
+                          rows="4"
+                          placeholder="Bijvoorbeeld: geschikt voor mealprep"></textarea>
+            </div>
+        </details>
+
+
+        <!-- Acties -->
+        <div class="formulier-acties">
+
+            <a href="/Recepten" class="btn-annuleren">
+                Annuleren
+            </a>
+
+            <button type="submit" class="btn-opslaan">
+                Recept opslaan
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
